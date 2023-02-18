@@ -10,7 +10,7 @@ $headers = @{
 }
 
 # Make a GET request to the GitHub API to retrieve the user's repositories
-$response = Invoke-RestMethod -Uri $url -Headers $headers # response is an array of JSON objects
+$response = Invoke-RestMethod -Uri $url -Headers $headers 
 
 # Iterate through the repositories and clone the entire repository for each one to the local computer
 foreach ($repo in $response) {
